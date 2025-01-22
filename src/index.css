@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210, 100%, 98%;
+    --foreground: 200 50% 3%;
+    --card: 200 20% 98%;
+    --card-foreground: 200 50% 3%;
+    --popover: 200 20% 98%;
+    --popover-foreground: 200 50% 3%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 30% 96%;
+    --secondary-foreground: 200 50% 3%;
+    --muted: 200 30% 96%;
+    --muted-foreground: 200 30% 40%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 5% 90%;
+    --input: 200 5% 90%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0, 0%, 10%;
+    --foreground: 214, 32%, 91%;
+    --card: 0, 0%, 15%;
+    --card-foreground: 214, 32%, 91%;
+    --popover: 0, 0%, 15%;
+    --popover-foreground: 214, 32%, 91%;
+    --primary: 217, 91%, 60%;
+    --primary-foreground: 0, 0%, 100%;
+    --secondary: 222, 47%, 15%;
+    --secondary-foreground: 214, 32%, 91%;
+    --muted: 222, 47%, 15%;
+    --muted-foreground: 214, 32%, 70%;
+    --accent: 217, 91%, 60%;
+    --accent-foreground: 0, 0%, 100%;
+    --destructive: 0, 62.8%, 30.6%;
+    --destructive-foreground: 210, 40%, 98%;
+    --border: 0, 0%, 20%;
+    --input: 0, 0%, 20%;
+    --ring: 217, 91%, 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Scrollbar Styles */
+@layer utilities {
+  /* For Webkit browsers (Chrome, Safari) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Light theme scrollbar */
+  :root .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-zinc-200 hover:bg-zinc-300;
+    border-radius: 50px;
+  }
+
+  /* Dark theme scrollbar */
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 hover:bg-gray-600;
+    border-radius: 50px;
+  }
+
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+  }
+
+  :root .custom-scrollbar {
+    scrollbar-color: hsl(217 91% 60%) transparent;
+  }
+}
+
+/* --------------- */
+.vds-settings-menu-items.vds-menu-items {
+  .vds-accessibility-menu,
+  .vds-audio-menu {
+    @apply hidden !important;
+  }
+}
