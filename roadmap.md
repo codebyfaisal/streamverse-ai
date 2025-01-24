@@ -8,7 +8,7 @@ A YouTube-inspired frontend project created in just one day using **Cursor AI Ed
 - Focuses on how AI can boost developer productivity and creativity.
 
 ## Tech Stack and Development Roadmap  
-For detailed information about the tech stack and the development plan, refer to the [**Tech Stack and Development Roadmap for 'StreamVerse'**](./roadmap.md).
+For detailed information about the tech stack and the development plan, refer to the [**Tech Stack and Development Roadmap for 'StreamVerse'**](https://github.com/codebyfaisal/streamverse-ai/blob/main/roadmap.md).
 
 ### Live Demo  
 [View the website](https://streamverse-ai.netlify.app)
